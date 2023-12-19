@@ -1,20 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package variavela.questão10;
 
-/**
- *
- * @author Sandro3
- */
+import javax.swing.JOptionPane;
+
+
 public class VariavelAQuestão10 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+    int A, i, cont; 
+    cont = 0;
+    for (i = 1; i <= 5; i++) 
+    {
+        String input = JOptionPane.showInputDialog("Digite um valor para A:");
+        A = Integer.parseInt(input);
+        
+        if (A < 0) 
+        {
+            cont++;
+        }
     }
-    
+    JOptionPane.showMessageDialog(null, "O número de valores negativos é: " + cont);
+ }
 }
